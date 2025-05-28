@@ -1,4 +1,4 @@
-# 🦉 Open Workflow Library (owlib)
+# 🦉 Open Workflow Library
 
 Welcome to the **Open Workflow Library** (OWL), home of community-driven specs, tooling, and “agentic” workflows for bioinformatics and beyond.
 
