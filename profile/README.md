@@ -1,87 +1,161 @@
-# 🦉 Workflow Library
+# 🦉 Open Workflow Library
 
-**A library of observable, composable, and promptable scientific workflow layers.**
+**A library of observable, composable, and promptable scientific workflows.**
 
-The Workflow Library is a curated collection of reproducible, self-describing analytics and scientific software **layers**, known as **OWLs** (Observable Workflow Layers). Each OWL is modular, observable, and designed to integrate smoothly into both human- and machine-driven research pipelines.
+The Open Workflow Library (OWL) is a curated collection of reproducible, AI-adaptable scientific workflow stacks. Each OWL stack is modular, cross-platform, and designed to integrate seamlessly into both human- and AI-driven research pipelines.
 
-This library serves as a resource for researchers, engineers, and tool developers who want to:
+This library serves as a resource for researchers, data scientists, and developers who want to:
 
-* Build transparent, pipeable data transformation workflows
-* Package analytic logic as clean Python modules with promptable interfaces
-* Emit interoperable artifacts like CWL, JSON, QMD, or summaries
-* Enable prompt-driven orchestration, testability, and documentation
-
----
-
-## 🔍 What is an Observable Workflow Layer (OWL)?
-
-An **Observable Workflow Layer** is a self-contained Python package that includes:
-
-* **🧠 Analytics logic** in tidy, pipeable, and modular functions (often using `polars`)
-* **📜 Prompt templates** for natural language summarization or LLM integration
-* **📤 Emitters** to export components as CWL, Markdown, or reports
-* **🧪 Smoke tests** and example data for validation and onboarding
-* **🧱 Structured layout** that supports internal reuse and external publication
-* **🕵️ Self-description**, via a `.describe()` method and metadata formats
-
-Each OWL is installable, testable, observable, and extendable—and can be layered together with other OWLs.
+* Build transparent, composable data analysis workflows that work across cloud platforms
+* Create AI-promptable workflow stacks with natural language interfaces  
+* Generate platform-agnostic execution files (CWL, Nextflow, cloud-native formats)
+* Enable reproducible science through standardized, self-documenting workflow stacks
 
 ---
 
-## 📁 Example OWL Structure
+## 🔍 What Makes OWL Different?
+
+**Observable**: Every workflow stack is self-describing and transparent. You can inspect what it does, how it works, and what it produces.
+
+**Composable**: Mix and match workflow stacks like building blocks. Each OWL is designed to work independently or as part of larger pipelines through intelligent composition.
+
+**Promptable**: Describe what you want in natural language. OWL stacks can be configured, adapted, and combined using AI-powered interfaces.
+
+**Cross-Platform**: Generate execution-ready files for any cloud platform or workflow engine from the same source stacks.
+
+---
+
+## 📁 OWL Stack Structure
 
 ```bash
-my-owl/
+my-owl-stack/
 ├── pyproject.toml
 ├── README.md
 ├── src/
 │   └── my_owl/
 │       ├── __init__.py
-│       ├── logic.py
+│       ├── workflow.py          # Core workflow logic
 │       ├── prompts/
-│       │   └── plan.prompt.txt
+│       │   ├── describe.txt     # Natural language description
+│       │   └── configure.txt    # Configuration prompts
 │       ├── emitters/
-│       │   └── cwl.py
-├── test/
-│   └── test_smoke.py
-└── Dockerfile
+│       │   ├── cwl.py          # Common Workflow Language
+│       │   ├── nextflow.py     # Nextflow DSL
+│       │   └── cloud.py        # Cloud-specific formats
+│       └── adapters/
+│           └── ai_interface.py  # AI integration layer
+├── tests/
+│   ├── test_workflow.py
+│   └── test_emitters.py
+├── examples/
+│   ├── sample_data/
+│   └── usage_examples.py
+└── docker/
+    └── Dockerfile
 ```
 
 ---
 
-## 📦 What’s Inside This GitHub Org
+## 🧠 AI-Powered Workflow Development
 
-* 🔬 Domain-specific OWLs (e.g., metrics, omics, QA/QC)
-* 🧰 Shared emitters and utilities (e.g., CWL generation, Quarto exports)
-* 💡 Examples and templates to help you scaffold your own Observable Workflow Layer
-* 📖 Documentation (coming soon to [workflowlibrary.org](https://workflowlibrary.org))
+OWL stacks are designed to work with AI systems and provide a unified interface across all domains:
 
----
-
-## 💡 Why “Observable”?
-
-* You can **inspect** what each OWL does and how
-* You can **query or prompt** it for summaries or usage
-* You can **emit structured output** to use downstream
-* You can **trust its structure** to be consistent across OWLs
-
-Observable means: **self-describing, testable, and ready to integrate.**
+* **Consistent API**: Same interface (`from_prompt()`, `to_cwl()`, `describe()`) across all OWL stacks
+* **Natural Language Configuration**: "Run quality control on RNA-seq data with standard thresholds"
+* **Intelligent Composition**: Automatically combine workflows from different domains with data flow mapping
+* **Adaptive Execution**: Workflows that adjust parameters based on data characteristics
+* **Auto-Documentation**: Generate human-readable summaries and technical documentation
 
 ---
 
-## 🚀 Get Started
+## 📦 What's in This Organization
 
-Want to make your own Observable Workflow Layer?
-
-* Check out [`owl-template`](https://github.com/workflow-library/owl-template)
-* Follow the conventions in `describe_owl()`, `emitters/`, and `prompts/`
-* Keep it reproducible, readable, and promptable
+* 🧬 **Domain-Specific Stacks**: `owl_genomics`, `owl_imaging`, `owl_proteomics`, `owl_metabolomics`
+* 🔬 **Multi-Domain Stacks**: `owl_multiomics`, `owl_systems_biology` for integrated analyses
+* 🔧 **Core Tools**: Shared composition engine, emitters, adapters, and AI interfaces
+* 📚 **Templates**: Scaffolding to create your own OWL stacks
+* 🌐 **Platform Adapters**: Deploy to Seven Bridges, Terra, AWS Batch, Google Cloud, and more
+* 📖 **Documentation**: Best practices and examples at [workflowlibrary.org](https://workflowlibrary.org)
 
 ---
 
-## 📫 Contact
+## 🎯 Use Cases
 
-* 🌐 Website: [workflowlibrary.org](https://workflowlibrary.org)
-* 📧 Email: [hello@workflowlibrary.org](mailto:hello@workflowlibrary.org)
+**For Researchers**: Use a consistent interface across all scientific domains - learn once, apply everywhere
 
-Want to contribute an OWL or suggest a convention? Reach out or open an issue!
+**For Multi-Omics Scientists**: Compose workflows from different domains or use pre-curated integrated stacks
+
+**For Platform Developers**: Integrate standardized workflows that work across multiple execution environments
+
+**For AI Systems**: Access promptable workflow stacks with intelligent composition capabilities
+
+**For Organizations**: Build reproducible analysis pipelines with built-in observability and cross-platform deployment
+
+---
+
+## 🚀 Quick Start
+
+### Using Existing Stacks
+```python
+import owl_genomics as owl
+
+# Consistent interface across all domains
+workflow = owl.from_prompt(
+    "Run RNA-seq QC with aggressive filtering for low-quality samples"
+)
+
+# Generate platform-specific execution files
+cwl_file = owl.to_cwl(workflow, target_platform="seven_bridges")
+```
+
+### Composing Multiple Stacks
+```python
+import owl_imaging as imaging
+import owl_dna_analysis as dna
+from owl_core import compose
+
+# Create individual workflows
+spatial_data = imaging.from_prompt("Extract spatial coordinates from H&E images")
+expression_data = dna.from_prompt("Quantify gene expression from RNA-seq")
+
+# Intelligently compose them into a unified pipeline
+combined = compose([spatial_data, expression_data])
+pipeline = combined.to_cwl(target_platform="terra")
+```
+
+### Using Pre-Curated Multi-Domain Stacks
+```python
+import owl_multiomics as owl
+
+# Common multi-omics patterns already integrated
+workflow = owl.from_prompt("Integrate RNA-seq and imaging data for spatial transcriptomics")
+```
+
+### Creating Your Own Stack
+1. Start with the [`owl-template`](https://github.com/workflow-library/owl-template)
+2. Implement your workflow logic following OWL conventions
+3. Add prompt templates for AI integration
+4. Include emitters for your target platforms
+5. Test and contribute back to the community
+
+---
+
+## 🤝 Community & Contribution
+
+OWL thrives on community contributions. Whether you're sharing a new workflow stack, improving existing tools, or adding support for new platforms, we welcome your involvement.
+
+* **Contributing**: See our [contribution guidelines](CONTRIBUTING.md)
+* **Discussions**: Join conversations about workflow best practices and new features
+* **Issues**: Report bugs or request new functionality
+
+---
+
+## 📫 Connect With Us
+
+* 🌐 **Website**: [workflowlibrary.org](https://workflowlibrary.org)
+* 📧 **Email**: [hello@workflowlibrary.org](mailto:hello@workflowlibrary.org)
+* 💬 **Community**: Join our discussions for support and collaboration
+
+---
+
+*Building the future of reproducible, AI-integrated scientific computing, one workflow at a time.*
