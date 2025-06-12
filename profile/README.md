@@ -1,8 +1,8 @@
-# 🦉 Open Workflow Library
+# 🦉 Optimzed Workflow Library (OWL)
 
-**A library of observable, composable, and promptable scientific workflows.**
+**A library of optimzed, composable, and promptable scientific workflows.**
 
-The Open Workflow Library (OWL) is a curated collection of reproducible, AI-adaptable scientific workflow stacks. Each OWL stack is modular, cross-platform, and designed to integrate seamlessly into both human- and AI-driven research pipelines.
+OWL is a curated collection of reproducible, AI-adaptable scientific workflow stacks. Each OWL stack is modular, cross-platform, and designed to integrate seamlessly into both human- and AI-driven research pipelines.
 
 This library serves as a resource for researchers, data scientists, and developers who want to:
 
@@ -137,16 +137,6 @@ workflow = owl.from_prompt("Integrate RNA-seq and imaging data for spatial trans
 3. Add prompt templates for AI integration
 4. Include emitters for your target platforms
 5. Test and contribute back to the community
-
----
-
-## 🤝 Community & Contribution
-
-OWL thrives on community contributions. Whether you're sharing a new workflow stack, improving existing tools, or adding support for new platforms, we welcome your involvement.
-
-* **Contributing**: See our [contribution guidelines](CONTRIBUTING.md)
-* **Discussions**: Join conversations about workflow best practices and new features
-* **Issues**: Report bugs or request new functionality
 
 ---
 
