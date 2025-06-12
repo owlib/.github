@@ -93,53 +93,6 @@ OWL stacks are designed to work with AI systems and provide a unified interface 
 
 ---
 
-## 🚀 Quick Start
-
-### Using Existing Stacks
-```python
-import owl_genomics as owl
-
-# Consistent interface across all domains
-workflow = owl.from_prompt(
-    "Run RNA-seq QC with aggressive filtering for low-quality samples"
-)
-
-# Generate platform-specific execution files
-cwl_file = owl.to_cwl(workflow, target_platform="seven_bridges")
-```
-
-### Composing Multiple Stacks
-```python
-import owl_imaging as imaging
-import owl_dna_analysis as dna
-from owl_core import compose
-
-# Create individual workflows
-spatial_data = imaging.from_prompt("Extract spatial coordinates from H&E images")
-expression_data = dna.from_prompt("Quantify gene expression from RNA-seq")
-
-# Intelligently compose them into a unified pipeline
-combined = compose([spatial_data, expression_data])
-pipeline = combined.to_cwl(target_platform="terra")
-```
-
-### Using Pre-Curated Multi-Domain Stacks
-```python
-import owl_multiomics as owl
-
-# Common multi-omics patterns already integrated
-workflow = owl.from_prompt("Integrate RNA-seq and imaging data for spatial transcriptomics")
-```
-
-### Creating Your Own Stack
-1. Start with the [`owl-template`](https://github.com/workflow-library/owl-template)
-2. Implement your workflow logic following OWL conventions
-3. Add prompt templates for AI integration
-4. Include emitters for your target platforms
-5. Test and contribute back to the community
-
----
-
 ## 📫 Connect With Us
 
 * 🌐 **Website**: [workflowlibrary.org](https://workflowlibrary.org)
