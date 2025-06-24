@@ -1,4 +1,3 @@
 # 🦉 Workflow Library
 
-A curated collection of reproducible, AI-adaptable scientific workflow stacks.
-
+Reusable, intelligent workflow specifications combining scientific methodology with computational implementation, executed through natural language interaction and optimized through community collaboration.
